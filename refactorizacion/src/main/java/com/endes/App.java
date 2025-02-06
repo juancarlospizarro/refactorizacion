@@ -1,7 +1,7 @@
 package com.endes;
 
 /**
- * Hello world!
+ * Clase principal main
  *
  */
 public class App 
@@ -20,12 +20,12 @@ public class App
         
         manager.addEmployee(employee1);
         
-        System.out.println(manager);
+        manager.printEmployees();
         
         manager.addEmployee(employee2);
         manager.addEmployee(employee3);
         
-        System.out.println(manager);
+        manager.printEmployees();
         
     }
 }

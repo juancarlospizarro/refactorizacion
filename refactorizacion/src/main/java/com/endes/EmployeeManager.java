@@ -4,36 +4,38 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * La clase EmployeeManager gestiona una lista de empleados, proporcionando métodos para
+ * agregar empleados a la lista y para imprimir la lista de empleados.
+ * 
+ * @author Juan Carlos Pizarro Alonso
+ */
 public class EmployeeManager {
-    List<Employee> listaEmpleados;
+    List<Employee> listEmployees;
     
-    
+    /**
+     * Constructor de la clase EmployeeManager
+     */
     public EmployeeManager() {
-    	listaEmpleados = new ArrayList<>();
+    	listEmployees = new ArrayList<>();
 	}
 
-
+    /**
+     * Metodo para añadir un empleado a la lista de empleados
+     * 
+     * @param employee
+     */
 	public void addEmployee(Employee employee) {
-    	listaEmpleados.addLast(employee);
+    	listEmployees.addLast(employee);
     }
 
-
-	@Override
-	public String toString() {
-		return "EmployeeManager [listaEmpleados=" + listaEmpleados + "]";
-	}
-    
-    /*public void printEmployees() {
+    /**
+     * Metodo para mostrar los empleados de la lista empleados
+     */
+    public void printEmployees() {
         System.out.println("List of employees:");
-        for (int i = 0; i < numberOfEmployees; i++) {
-            System.out.println(employeeNames[i] + ", Years in company: " + employeeYears[i]);
+        for (Employee employee : listEmployees) {
+            System.out.println(employee);
         }
-    }*/
-    
-    /*public static void main(String[] args) {
-        EmployeeManager manager = new EmployeeManager();
-        manager.addEmployee("John Doe", 5);
-        manager.addEmployee("Jane Smith", 2);
-        manager.printEmployees();
-    }*/
+    }
 }
